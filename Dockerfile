@@ -1,4 +1,4 @@
-FROM kibana:4.6.2
+FROM kibana:4.1.11
 MAINTAINER ashmastaflash
 
 
