@@ -17,6 +17,6 @@ if [ "$1" = 'kibana' ]; then
 	set -- gosu kibana tini -- "$@"
 fi
 
-exec "$@" &
 /opt/kibana/bin/kibana plugin -i elastic/timelion
-exec "$@ restart"
+exec "$@"
+# exec "$@ restart"
