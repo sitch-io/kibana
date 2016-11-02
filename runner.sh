@@ -18,10 +18,10 @@ if [ "$1" = 'kibana' ]; then
 fi
 
 echo "Starting Kibana"
-exec "$@" &
+/opt/kibana/bin/kibana &
 echo "Installing Timelion"
 /opt/kibana/bin/kibana plugin -i elastic/timelion
 echo "Killing Kibana"
 killall kibana
 echo "Starting Kibana again"
-exec "$@"
+/opt/kibana/bin/kibana
