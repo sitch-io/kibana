@@ -19,6 +19,7 @@ fi
 
 echo "Starting Kibana"
 /opt/kibana/bin/kibana &
+sleep 30
 echo "Installing Timelion"
 /opt/kibana/bin/kibana plugin -i elastic/timelion
 echo "Killing Kibana"
