@@ -18,5 +18,5 @@ if [ "$1" = 'kibana' ]; then
 fi
 
 exec "$@" &
-/usr/share/kibana/bin/kibana-plugin install timelion
+/usr/share/kibana/bin/kibana plugin -i elastic/timelion
 exec "$@ restart"
