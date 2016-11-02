@@ -17,12 +17,12 @@ if [ "$1" = 'kibana' ]; then
 	set -- gosu kibana tini -- "$@"
 fi
 
-echo "Starting Kibana"
+echo "Starting Kibana" > /dev/console
 /opt/kibana/bin/kibana &
 sleep 30
-echo "Installing Timelion"
+echo "Installing Timelion" > /dev/console
 /opt/kibana/bin/kibana plugin -i elastic/timelion
-echo "Killing Kibana"
+echo "Killing Kibana" > /dev/console
 killall kibana
-echo "Starting Kibana again"
+echo "Starting Kibana again" > /dev/console
 /opt/kibana/bin/kibana
