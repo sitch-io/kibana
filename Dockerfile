@@ -8,4 +8,4 @@ COPY runner.sh /runner.sh
 
 ENTRYPOINT /bin/sh
 
-CMD bash /runner.sh
+CMD /runner.sh
