@@ -23,6 +23,6 @@ sleep 30
 echo "Installing Timelion" > /dev/console
 /opt/kibana/bin/kibana plugin -i elastic/timelion
 echo "Killing Kibana" > /dev/console
-killall kibana
+killall node
 echo "Starting Kibana again" > /dev/console
 /opt/kibana/bin/kibana
