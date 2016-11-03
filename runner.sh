@@ -9,13 +9,13 @@ if [[ "$1" == -* ]]; then
 fi
 
 # Run as user "kibana" if the command is "kibana"
-if [ "$1" = 'kibana' ]; then
+#if [ "$1" = 'kibana' ]; then
 	if [ "$ELASTICSEARCH_URL" ]; then
 		sed -ri "s!^(\#\s*)?(elasticsearch\.url:).*!\2 '$ELASTICSEARCH_URL'!" /etc/kibana/kibana.yml
 	fi
 
-	set -- gosu kibana tini -- "$@"
-fi
+#	set -- gosu kibana tini -- "$@"
+# fi
 
 echo "Starting Kibana" > /dev/console
 /opt/kibana/bin/kibana &
