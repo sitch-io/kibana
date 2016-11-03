@@ -6,4 +6,6 @@ RUN apt-get update && apt-get install -y \
 
 COPY runner.sh /runner.sh
 
-CMD /bin/sh /runner.sh
+ENTRYPOINT /bin/sh
+
+CMD bash /runner.sh
