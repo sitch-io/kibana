@@ -1,4 +1,4 @@
-FROM kibana:4.6.2
+FROM kibana:4.5
 MAINTAINER ashmastaflash
 
 RUN apt-get update && apt-get install -y \
